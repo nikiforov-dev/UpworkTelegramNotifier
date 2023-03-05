@@ -1,0 +1,5 @@
+SQLAlchemy~=2.0.4
+selenium~=4.8.2
+pyTelegramBotAPI~=4.10.0
+alembic~=1.10.1
+pyclean~=2.7.0

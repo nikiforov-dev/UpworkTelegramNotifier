@@ -1,0 +1,12 @@
+[Database]
+DbConnectionString = sqlite:///db/db.sqlite
+
+[Telegram]
+BotToken =
+ChatId =
+
+[Parser]
+FilterUrl = https://www.upwork.com/nx/jobs/search/?q=logo\%20design&sort=recency&t=1&client_hires=10-&duration_v3=ongoing
+
+[RepeatTime]
+Seconds = 30
