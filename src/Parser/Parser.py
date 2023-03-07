@@ -5,12 +5,28 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
 from src.DTO.JobDTO import JobDTO
 
-
 class Parser:
     def __init__(self, config: Config):
         self.__config = config
 
-        self.__driver = webdriver.Chrome(os.path.join(os.getcwd(), 'driver', 'chromedriver'))
+        options = Options()
+
+        user_agent = 'Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; WOW64; Trident/4.0; SLCC2; .NET CLR ' \
+                     '2.0.50727; InfoPath.2)'
+
+        print(user_agent)
+
+        options.add_argument('--log-level=3')
+        options.add_argument('--disable-logging')
+        options.add_argument('--no-sandbox')
+        options.add_argument('--headless')
+        options.add_argument('--disable-gpu')
+        options.add_argument('--ignore-certificate-errors-spki-list')
+        options.add_argument('--ignore-ssl-errors')
+        options.add_argument('--window-size=1920,1080')
+        options.add_argument(f"--user-agent={user_agent}")
+
+        self.__driver = webdriver.Chrome(os.path.join(os.getcwd(), 'driver', 'chromedriver'), chrome_options=options, )
 
     def get_jobs(self) -> list:
         self.__driver.get(self.__config.get_upwork_filters_url())
