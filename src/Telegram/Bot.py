@@ -10,4 +10,4 @@ class Bot:
         self.__bot = telebot.TeleBot(self.__token)
 
     def send_job(self, job: JobDTO):
-        self.__bot.send_message(self.__chat_id, job.__str__())
+        self.__bot.send_message(self.__chat_id, job.__str__(), parse_mode='html')

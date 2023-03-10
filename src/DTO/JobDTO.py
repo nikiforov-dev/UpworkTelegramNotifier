@@ -7,4 +7,7 @@ class JobDTO:
         self.work_type = work_type
 
     def __str__(self):
-        return f'------\n{self.title}\n{self.work_type}\n{self.link}, {self.amount}\n{self.description}\n------\n\n'
+        return f'<b>{self.title}</b>\n\n' \
+               f'<u>{self.work_type} | {self.amount}</u>\n\n' \
+               f'<em>« {self.description} »</em>\n\n' \
+               f'<a href=\'{self.link}\'><b>Open</b></a>'

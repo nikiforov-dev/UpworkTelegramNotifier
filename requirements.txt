@@ -4,3 +4,4 @@ pyTelegramBotAPI~=4.10.0
 alembic~=1.10.1
 pyclean~=2.7.0
 fake-useragent~=1.1.1
+auto-py-to-exe==2.32.0

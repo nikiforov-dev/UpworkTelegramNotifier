@@ -1,2 +1,5 @@
+venv/
 config.ini
-.idea
+.idea/
+.DS_Store
+exe_settings.json
